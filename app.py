@@ -8,6 +8,8 @@ from os import path, makedirs
 
 from flask import Flask, render_template
 
+# import articles
+
 # --------------------
 # CONSTANTS
 # --------------------

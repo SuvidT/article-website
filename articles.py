@@ -225,7 +225,13 @@ def load_articles():
     pass
 
 def load_article(num):
-    pass
+    data = load_json()
+
+    article = data[num]
+
+    article["content"] = load_md_as_html(article["title"])
+
+    return article
 
 # --------------------
 # GETTER / SETTER
@@ -235,9 +241,6 @@ def get_article_date(article):
     returns the date of the article
     '''
     return article["date"]
-
-def get_content(article):
-    pass
 
 def get_articles(articles):
     pass

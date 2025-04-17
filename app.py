@@ -8,7 +8,7 @@ from os import path, makedirs
 
 from flask import Flask, render_template
 
-# import articles
+import articles
 
 # --------------------
 # CONSTANTS
@@ -32,7 +32,19 @@ def error(e):
     Returns:
         Error
     '''
+    # Todo: error.html
     return render_template("error.html", error=e), e
+
+@app.route('/')
+@app.route('/articles/')
+def articles():
+    return "articles page"
+
+@app.route('/articles/<int:num>')
+def aritcle(num):
+    article = articles.load_article(num)
+    #check archived
+    return render_template("article.html", article=article)
 
 # --------------------
 # DEPLOYMENT

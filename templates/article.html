@@ -1,0 +1,17 @@
+{% extends base.html %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block body %}
+<main>
+    <!-- Heading Area -->
+    <p class="date">{{ article.date_edited.0 }}-{{ article.date_edited.1 }}-{{ article.date_edited.2 }}</p>
+    <h1 class="title">{{ article.title }}</h1>
+    <p class="author">by {{article.author}}</p>
+
+    <!-- Article/Body/Reading Area -->
+     <article>
+        {{ article.content}}
+     </article>
+</main>
+{% endblock %}

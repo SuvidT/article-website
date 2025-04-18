@@ -1,5 +1,5 @@
 # Article Website
-- [ ] error page
+- [x] error page
 - [ ] home/articles page
 - [ ] article page
 - [ ] signup page

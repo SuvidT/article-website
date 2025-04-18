@@ -33,11 +33,11 @@ def error(e):
         Error
     '''
     # Todo: error.html
-    return render_template("error.html", error=e), e
+    return render_template("error.html", error=e), e.code
 
 @app.route('/')
 @app.route('/articles/')
-def articles():
+def articles_page():
     return "articles page"
 
 @app.route('/articles/<int:num>')

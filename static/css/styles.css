@@ -1,0 +1,142 @@
+/* Reset and Base Styles */
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2a2a2a;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-left, .nav-right {
+/* Add styling for left and right navigation elements */
+}
+
+/* Main Content (Article) */
+main {
+    width: 75%; /* Decreased width */
+    max-width: 900px; /* Kept max width */
+    margin: 3rem auto;
+    background-color: #252525;
+    padding: 3rem; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+}
+
+.author {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+article {
+    line-height: 1.7;
+}
+
+article p, article ul, article ol {
+    margin-bottom: 1rem;
+}
+
+article h2, article h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #d0d0d0;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+article blockquote {
+    background-color: #333;
+    border-left: 5px solid #555;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 2rem; /* reduce padding on smaller screens */
+        margin: 2rem auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Error Page Styling */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* reduced vertical space */
+    padding: 0.25rem;  /* minimal outer padding */
+  }
+  
+  .error-content {
+    text-align: center;
+    padding: 0.5rem 0.75rem; /* very compact padding */
+    max-width: 480px;
+    width: 100%;
+    margin-top: 0.25rem; /* reduced top margin */
+  }
+  
+  .error-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.1rem; /* tightest spacing */
+    color: #ff6b6b;
+  }
+  
+  .error-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    color: #e0e0e0;
+  }
+  
+  .error-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; /* tighter spacing below paragraph */
+    color: #ccc;
+  }
+  

@@ -254,3 +254,6 @@ if not os.path.exists(ARTICLES_PATH):
 if not os.path.exists(ARTICLES_JSON):
     with open(ARTICLES_JSON, "w", encoding="utf-8") as f:
         json.dump([], f, indent=4)
+
+if __name__ == '__main__':
+    pass 

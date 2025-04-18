@@ -1,7 +1,7 @@
 # Article Website
 - [x] error page
 - [ ] home/articles page
-- [ ] article page
+- [x] article page
 - [ ] signup page
 - [ ] login page
 - [ ] forgot password page

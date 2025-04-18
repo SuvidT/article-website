@@ -27,10 +27,6 @@ nav {
     margin: 0 auto;
 }
 
-.nav-left, .nav-right {
-/* Add styling for left and right navigation elements */
-}
-
 /* Main Content (Article) */
 main {
     width: 75%; /* Decreased width */

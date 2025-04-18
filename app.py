@@ -38,7 +38,9 @@ def error(e):
 @app.route('/')
 @app.route('/articles/')
 def articles_page():
-    return "articles page"
+    a = articles.load_articles()
+
+    return render_template("articles.html", articles=a)
 
 @app.route('/articles/<int:num>')
 def aritcle(num):

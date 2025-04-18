@@ -85,7 +85,7 @@ def std_date(article):
     Args:
         - date ([year, month, day]): the date an article was released
     '''
-    date = get_article_date(article)
+    date = get_article_date_created(article)
     return date[0] + (date[1] - 1)/12 + (date[2] - 1)/310
 
 def sort_articles(articles, ascending):
@@ -222,7 +222,10 @@ def load_articles():
     '''
     gets 
     '''
-    pass
+    d = load_json()
+    arr = list(range(len(d)))
+
+    return get_articles(arr) 
 
 def load_article(num):
     data = load_json()
@@ -236,14 +239,27 @@ def load_article(num):
 # --------------------
 # GETTER / SETTER
 # --------------------
-def get_article_date(article):
+def get_article_date_created(article):
     '''
     returns the date of the article
     '''
-    return article["date"]
+    return article["date_created"]
+
+def get_article_date_edited(article):
+    '''
+    returns the date of the article
+    '''
+    return article["date_edited"]
 
 def get_articles(articles):
-    pass
+    data = load_json()
+
+    new_data = []
+    for x in articles:
+        if x is not None:
+            new_data.append(data[x])
+
+    return sort_articles(new_data, False)
 
 # --------------------
 # SETUP

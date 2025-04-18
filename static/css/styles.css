@@ -27,32 +27,28 @@ nav {
     margin: 0 auto;
 }
 
-/* Main Content (Article) */
+/* Main Content */
 main {
-    width: 75%; /* Decreased width */
-    max-width: 900px; /* Kept max width */
+    width: 75%;
+    max-width: 900px;
     margin: 3rem auto;
     background-color: #252525;
-    padding: 3rem; /* Increased padding */
+    padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.date {
-    font-size: 0.9rem;
-    color: #999;
-    margin-bottom: 0.5rem;
-    text-align: right;
-}
-
+/* Article Title */
 .title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     line-height: 1.2;
     text-align: center;
     color: #fff;
 }
 
+/* Article Page Elements */
 .author {
     font-style: italic;
     color: #ccc;
@@ -92,7 +88,7 @@ article blockquote {
 @media (max-width: 768px) {
     main {
         width: 95%;
-        padding: 2rem; /* reduce padding on smaller screens */
+        padding: 2rem;
         margin: 2rem auto;
     }
 
@@ -106,21 +102,21 @@ article blockquote {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh; /* reduced vertical space */
-    padding: 0.25rem;  /* minimal outer padding */
+    min-height: 50vh;
+    padding: 0.25rem;
 }
 
 .error-content {
     text-align: center;
-    padding: 0.5rem 0.75rem; /* very compact padding */
+    padding: 0.5rem 0.75rem;
     max-width: 480px;
     width: 100%;
-    margin-top: 0.25rem; /* reduced top margin */
+    margin-top: 0.25rem;
 }
 
 .error-content h1 {
     font-size: 3rem;
-    margin-bottom: 0.1rem; /* tightest spacing */
+    margin-bottom: 0.1rem;
     color: #ff6b6b;
 }
 
@@ -132,6 +128,58 @@ article blockquote {
 
 .error-content p {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem; /* tighter spacing below paragraph */
+    margin-bottom: 0.5rem;
     color: #ccc;
+}
+
+/* Article List Styles */
+.article_link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.article_sec {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article_link:hover .article_sec {
+    background-color: #2f2f2f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.article_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article_name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.article_name:hover {
+    text-decoration: underline;
+    color: #ECDFCC;
+}
+
+.article_date {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: right;
+    font-family: monospace;
+}
+
+.article_author {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 0.25rem;
 }

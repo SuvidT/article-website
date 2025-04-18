@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Articles{% endblock %}
+ 
+{% block body %}
+<main>
+    <!-- Heading area -->
+    <p class="title">Blog</p>
+
+    <!-- Articles list area -->
+    {% for article in articles %}
+        {% if not article.archived %}
+            <a href="/articles/{{ article.num }}" class="article_link">
+                <div class="article_sec">
+                <div class="article_header">
+                    <p class="article_name">{{ article.title }}</p>
+                    <p class="article_date">{{ article.date_edited.0 }}-{{ article.date_edited.1 }}-{{ article.date_edited.2 }}</p>
+                </div>
+                <p class="article_author">by {{ article.author }}</p>
+                </div>
+            </a>               
+        {% endif %}
+    {% endfor %}
+</main>
+{% endblock %}

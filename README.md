@@ -1,11 +1,6 @@
-# Article Website
-- [x] error page
-- [ ] home/articles page
-- [x] article page
-- [ ] signup page
-- [ ] login page
-- [ ] forgot password page
-- [ ] user articles page
-- [ ] user edit page
-- [ ] user add page
-- [ ] admin page
+this is the readme
+
+this is the project page:
+https://roadmap.sh/projects/personal-blog
+
+This is very not compelted but I am done

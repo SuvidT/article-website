@@ -6,7 +6,7 @@ app.py runs the website and contains all the routes and views that will be shown
 # --------------------
 from os import path, makedirs
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, session, flash
 
 import articles
 
@@ -14,6 +14,7 @@ import articles
 # CONSTANTS
 # --------------------
 app = Flask(__name__)
+app.secret_key = 'FakeKey'
 
 # --------------------
 # ROUTES
@@ -37,7 +38,7 @@ def error(e):
 
 @app.route('/')
 @app.route('/articles/')
-def articles_page():
+def home():
     a = articles.load_articles()
 
     return render_template("articles.html", articles=a)
